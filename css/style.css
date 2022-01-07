@@ -12,11 +12,6 @@
   -tab-l
   -big-desktop
    */
-/*  @mixin respond($breakpoint) {
-    @if $breakpoint == mini-phone {
-      @media (max-width: 37.5em) {
-        @content;
-      } */
 .header {
   color: #fff;
   padding: 20rem 0 15rem 0;
@@ -35,6 +30,9 @@
   .header__text-container {
     text-align: center;
     position: relative; }
+    @media (max-width: 37.5em) {
+      .header__text-container {
+        text-align: center; } }
   .header__heading-first {
     font-size: 7rem;
     font-weight: 400; }
@@ -43,20 +41,17 @@
         font-size: 4.5rem;
         padding: 0 5rem; } }
     .header__heading-first .wrapper {
+      display: inline-block;
       position: relative;
       margin-left: 3rem;
       width: 5rem; }
+      @media (max-width: 23.43em) {
+        .header__heading-first .wrapper {
+          margin-left: 1rem; } }
     .header__heading-first .name {
       position: absolute;
       color: #5e5d5d;
-      left: 0;
-      /*  @include respond(tab-port) {
-        margin-left: 3rem;
-      }
-      @include respond(phone) {
-        margin-left: 5rem;
-        // display: block;
-      } */ }
+      left: 0; }
     .header__heading-first .name:before {
       content: attr(data-heading);
       position: absolute;
@@ -307,7 +302,7 @@
     height: 6rem;
     background-color: #880000;
     top: 3rem;
-    right: 5rem;
+    right: 3rem;
     border-radius: 100px;
     display: flex;
     flex-direction: column;
@@ -678,7 +673,10 @@ html {
       font-size: 50%; } }
   @media (max-width: 37.5em) {
     html {
-      font-size: 43%; } }
+      font-size: 43.75%; } }
+  @media (max-width: 23.43em) {
+    html {
+      font-size: 37.5%; } }
 
 body {
   font-family: "livewellregular", sans-serif;

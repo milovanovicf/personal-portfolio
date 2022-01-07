@@ -19,6 +19,10 @@
   &__text-container {
     text-align: center;
     position: relative;
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 
   &__heading-first {
@@ -31,26 +35,20 @@
     }
 
     .wrapper {
+      display: inline-block;
       position: relative;
       margin-left: 3rem;
       width: 5rem;
-      //height: max-content;
+
+      @include respond(mini-phone) {
+        margin-left: 1rem;
+      }
     }
 
     .name {
       position: absolute;
       color: #5e5d5d;
-      //margin-left: 2.5rem;
       left: 0;
-      //right: 2.5rem;
-
-      /*  @include respond(tab-port) {
-        margin-left: 3rem;
-      }
-      @include respond(phone) {
-        margin-left: 5rem;
-        // display: block;
-      } */
     }
 
     .name:before {
