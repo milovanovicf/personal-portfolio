@@ -1,0 +1,276 @@
+.header {
+  color: #fff;
+  padding: 20rem 0 15rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #112d32;
+  position: relative;
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 20rem 5rem;
+  }
+
+  &__text-container {
+    text-align: center;
+    position: relative;
+  }
+
+  &__heading-first {
+    font-size: 7rem;
+    font-weight: 400;
+
+    /* @include respond(phone) {
+      margin: 0 5rem;
+    } */
+
+    .name {
+      position: absolute;
+      color: #5e5d5d;
+      margin-left: 2.5rem;
+      //right: 2.5rem;
+
+      @include respond(tab-port) {
+        margin-left: 3rem;
+      }
+      @include respond(phone) {
+        margin-left: 4rem;
+        // display: block;
+      }
+    }
+
+    .name:before {
+      content: attr(data-heading);
+      position: absolute;
+      color: #ffcc00;
+      width: 100%;
+      z-index: 5;
+      text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4),
+        1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4),
+        1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00,
+        0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+      animation: flicker 3s linear 5s infinite;
+    }
+
+    @keyframes flicker {
+      0%,
+      19.999%,
+      22%,
+      62.999%,
+      64%,
+      64.999%,
+      70%,
+      100% {
+        opacity: 0.99;
+        text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4),
+          1px -1px 0 rgba(255, 255, 255, 0.4),
+          -1px 1px 0 rgba(255, 255, 255, 0.4),
+          1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px,
+          0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+      }
+      20%,
+      21.999%,
+      63%,
+      63.999%,
+      65%,
+      69.999% {
+        opacity: 0.4;
+        text-shadow: none;
+      }
+    }
+    .rest {
+      padding-left: 50px;
+      text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4),
+        1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4),
+        1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00,
+        0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+      color: #ffcc00;
+    }
+  }
+
+  &__heading-second {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  &__paragraph {
+    font-size: 2rem;
+    color: #6e6658;
+  }
+
+  &__square {
+    display: block;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    margin: 5rem 0;
+    //opacity: 0;
+
+    &__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
+
+  .l1,
+  .l2,
+  .l3,
+  .l4 {
+    position: absolute;
+    background: transparent;
+    width: 0px;
+    height: 0px;
+
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .l1 {
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 2px;
+    animation-name: l1;
+    animation-delay: 0.9s;
+  }
+
+  .l2 {
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    animation-name: l2;
+    animation-delay: 1.6s;
+  }
+
+  .l3 {
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 2px;
+    animation-name: l3;
+    animation-delay: 2.5s;
+  }
+
+  .l4 {
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 2px;
+    animation-name: l4;
+    animation-delay: 3.4s;
+  }
+  @keyframes l1 {
+    0% {
+      height: 0;
+      background: #eee;
+    }
+    100% {
+      height: 50px;
+      background: #eee;
+    }
+  }
+
+  @keyframes l2 {
+    0% {
+      width: 0;
+      background: #eee;
+    }
+    100% {
+      width: 200px;
+      background: #eee;
+    }
+  }
+
+  @keyframes l3 {
+    0% {
+      height: 0;
+      background: #eee;
+    }
+    100% {
+      height: 50px;
+      background: #eee;
+    }
+  }
+
+  @keyframes l4 {
+    0% {
+      width: 0;
+      background: #eee;
+    }
+    100% {
+      width: 200px;
+      background: #eee;
+    }
+  }
+
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    @include respond(mid-desk) {
+      bottom: -0.5rem;
+    }
+  }
+  .wave svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 263px;
+  }
+
+  .wave .shape-fill {
+    fill: #88bdbc;
+  }
+  .arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 15rem;
+    padding: 0 10rem;
+
+    @include respond(tab-port) {
+      padding: 0 5rem;
+    }
+
+    @include respond(tab-port) {
+      bottom: 20rem;
+    }
+  }
+
+  .arrow {
+    fill: #fff;
+    width: 3rem;
+    height: 3rem;
+    animation: arrow-animation 2s linear infinite;
+  }
+
+  @keyframes arrow-animation {
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-3rem);
+      opacity: 0;
+    }
+  }
+}

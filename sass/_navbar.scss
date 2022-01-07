@@ -1,0 +1,150 @@
+.nav {
+  position: fixed;
+  top: 40%;
+  left: 1rem;
+  font-size: 1.7rem;
+  z-index: 99;
+
+  @include respond(tab-port) {
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    background-color: #acc3b4;
+    padding-top: 5rem;
+    transition: all 0.3s;
+
+    &.show {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #4f4a41;
+    background-color: #fff;
+    margin: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    width: 5.5rem;
+    overflow: hidden;
+    height: 5.5rem;
+    transition: all 0.3s;
+
+    @include respond(tab-port) {
+      width: 100%;
+      border-radius: 0;
+      padding: 4rem 2.5rem;
+      margin: 5rem 0;
+    }
+
+    &.active {
+      background-color: #c4b4ab;
+      color: #fff;
+    }
+
+    &:hover {
+      width: 100%;
+    }
+
+    &:hover .text {
+      display: block;
+    }
+  }
+
+  .text {
+    display: none;
+    padding-left: 1rem;
+
+    @include respond(tab-port) {
+      display: block;
+      font-size: 3rem;
+    }
+  }
+
+  .fas {
+    font-size: 2rem;
+
+    &.fa-user {
+      padding: 0 0.3rem;
+    }
+  }
+}
+
+.mobile-menu {
+  @include respond(tab-port) {
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    background-color: #880000;
+    top: 0;
+    right: 0;
+    border-radius: 100px;
+    margin: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    z-index: 999;
+
+    &__line {
+      height: 2px;
+      width: 50%;
+      background-color: #fff;
+      z-index: 999;
+      transition: all 0.3s;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        width: 25%;
+      }
+
+      &:nth-child(1) {
+        align-self: flex-start;
+        margin-left: 1.5rem;
+      }
+
+      /*  &:nth-child(2) {
+      transform: rotate(150deg);
+      width: 60%;
+    } */
+      &:nth-child(3) {
+        align-self: flex-end;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}
+
+.toggle-1 {
+  transform: rotate(35deg);
+  transform-origin: left;
+}
+
+.toggle-3 {
+  transform: rotate(35deg);
+  transform-origin: right;
+}
+
+.toggle-2 {
+  transform: rotate(-40deg);
+  width: 55%;
+}

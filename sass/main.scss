@@ -1,0 +1,62 @@
+@import "mixins";
+@import "header";
+@import "navbar";
+@import "about";
+@import "portfolio";
+@import "footer";
+
+@font-face {
+  font-family: "livewellregular";
+  src: url("../font/livewell-regular-webfont.woff2") format("woff2"),
+    url("../font/livewell-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  @include respond(mid-desk) {
+    font-size: 57%; //1rem = 12; 12/16
+  }
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px; 9/16 = 56%
+  }
+
+  @include respond(tab-port) {
+    //width < 900?
+    font-size: 50%; //1 rem = 8px; 8/16 = 50%
+  }
+
+  @include respond(phone) {
+    font-size: 43%;
+  }
+
+  /* @include respond(big-desk) {
+    font-size: 75%; //1rem = 12; 12/16
+  } */
+}
+
+body {
+  font-family: "livewellregular", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  /*   background-image: url("../images/wave-haikei\ \(2\).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ */
+}
