@@ -302,7 +302,7 @@
     height: 6rem;
     background-color: #880000;
     top: 3rem;
-    right: 3rem;
+    right: 2rem;
     border-radius: 100px;
     display: flex;
     flex-direction: column;
@@ -329,6 +329,11 @@
       .mobile-menu__line:nth-child(3) {
         align-self: flex-end;
         margin-right: 1.5rem; } }
+
+@media (max-width: 37.5em) {
+  .mobile-menu {
+    width: 5rem;
+    height: 5rem; } }
 
 .toggle-1 {
   transform: rotate(35deg);
