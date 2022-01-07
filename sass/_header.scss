@@ -29,19 +29,28 @@
       font-size: 4.5rem;
       padding: 0 5rem;
     }
+
+    .wrapper {
+      position: relative;
+      margin-left: 3rem;
+      width: 5rem;
+      //height: max-content;
+    }
+
     .name {
       position: absolute;
       color: #5e5d5d;
-      margin-left: 2.5rem;
+      //margin-left: 2.5rem;
+      left: 0;
       //right: 2.5rem;
 
-      @include respond(tab-port) {
+      /*  @include respond(tab-port) {
         margin-left: 3rem;
       }
       @include respond(phone) {
         margin-left: 5rem;
         // display: block;
-      }
+      } */
     }
 
     .name:before {
@@ -84,12 +93,16 @@
       }
     }
     .rest {
-      padding-left: 50px;
+      padding-left: 3rem;
       text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4),
         1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4),
         1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00,
         0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
       color: #ffcc00;
+
+      @include respond(phone) {
+        padding-left: 2rem;
+      }
     }
   }
 
@@ -120,7 +133,7 @@
       justify-content: center;
       align-items: center;
       height: 100%;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 300;
     }
   }
