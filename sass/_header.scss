@@ -7,13 +7,14 @@
   justify-content: center;
   background-color: #112d32;
   position: relative;
+  font-size: 3rem !important;
 
   @include respond(tab-port) {
     padding: 20rem 0;
   }
 
   @include respond(phone) {
-    padding: 20rem 5rem;
+    padding: 15rem 3rem 20rem 3rem;
   }
 
   &__text-container {
@@ -25,10 +26,9 @@
     font-size: 7rem;
     font-weight: 400;
 
-    /* @include respond(phone) {
-      margin: 0 5rem;
-    } */
-
+    @include respond(phone) {
+      padding: 0 5rem;
+    }
     .name {
       position: absolute;
       color: #5e5d5d;
@@ -252,6 +252,10 @@
 
     @include respond(tab-port) {
       bottom: 20rem;
+    }
+
+    @include respond(phone) {
+      display: none;
     }
   }
 

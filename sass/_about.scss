@@ -32,6 +32,10 @@
     @include respond(tab-port) {
       padding: 0 5rem;
     }
+
+    @include respond(tab-port) {
+      padding: 0 1rem;
+    }
   }
 
   &__container {
