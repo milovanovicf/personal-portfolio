@@ -7,7 +7,6 @@
   justify-content: center;
   background-color: #112d32;
   position: relative;
-  font-size: 3rem !important;
 
   @include respond(tab-port) {
     padding: 20rem 0;
@@ -27,6 +26,7 @@
     font-weight: 400;
 
     @include respond(phone) {
+      font-size: 4.5rem;
       padding: 0 5rem;
     }
     .name {
@@ -39,7 +39,7 @@
         margin-left: 3rem;
       }
       @include respond(phone) {
-        margin-left: 4rem;
+        margin-left: 5rem;
         // display: block;
       }
     }
@@ -96,6 +96,10 @@
   &__heading-second {
     font-size: 4rem;
     font-weight: 300;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 
   &__paragraph {
@@ -116,7 +120,7 @@
       justify-content: center;
       align-items: center;
       height: 100%;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 300;
     }
   }

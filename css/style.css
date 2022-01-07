@@ -1,4 +1,5 @@
 /* 
+  0 - 400px mini-phone
   0 - 600px phone
   600 - 900px tablet p
   900 - 1200px tablet l
@@ -11,6 +12,11 @@
   -tab-l
   -big-desktop
    */
+/*  @mixin respond($breakpoint) {
+    @if $breakpoint == mini-phone {
+      @media (max-width: 37.5em) {
+        @content;
+      } */
 .header {
   color: #fff;
   padding: 20rem 0 15rem 0;
@@ -19,8 +25,7 @@
   align-items: center;
   justify-content: center;
   background-color: #112d32;
-  position: relative;
-  font-size: 3rem !important; }
+  position: relative; }
   @media (max-width: 56.25em) {
     .header {
       padding: 20rem 0; } }
@@ -35,6 +40,7 @@
     font-weight: 400; }
     @media (max-width: 37.5em) {
       .header__heading-first {
+        font-size: 4.5rem;
         padding: 0 5rem; } }
     .header__heading-first .name {
       position: absolute;
@@ -45,7 +51,7 @@
           margin-left: 3rem; } }
       @media (max-width: 37.5em) {
         .header__heading-first .name {
-          margin-left: 4rem; } }
+          margin-left: 5rem; } }
     .header__heading-first .name:before {
       content: attr(data-heading);
       position: absolute;
@@ -81,6 +87,9 @@
   .header__heading-second {
     font-size: 4rem;
     font-weight: 300; }
+    @media (max-width: 37.5em) {
+      .header__heading-second {
+        font-size: 3rem; } }
   .header__paragraph {
     font-size: 2rem;
     color: #6e6658; }
@@ -95,7 +104,7 @@
       justify-content: center;
       align-items: center;
       height: 100%;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 300; }
   .header .l1,
   .header .l2,
@@ -369,7 +378,7 @@
         flex-direction: column;
         align-items: center; } }
   .about .container__profile-pic {
-    width: 50rem;
+    max-width: 50rem;
     height: 30rem; }
     @media (max-width: 56.25em) {
       .about .container__profile-pic {
@@ -668,6 +677,7 @@ body {
   font-family: "livewellregular", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  position: relative;
   /*   background-image: url("../images/wave-haikei\ \(2\).svg");
   background-repeat: no-repeat;
   background-size: cover;

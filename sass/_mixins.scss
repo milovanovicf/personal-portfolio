@@ -1,4 +1,5 @@
 /* 
+  0 - 400px mini-phone
   0 - 600px phone
   600 - 900px tablet p
   900 - 1200px tablet l
@@ -12,6 +13,12 @@
   -tab-l
   -big-desktop
    */
+
+/*  @mixin respond($breakpoint) {
+    @if $breakpoint == mini-phone {
+      @media (max-width: 37.5em) {
+        @content;
+      } */
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {

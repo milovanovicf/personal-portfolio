@@ -50,7 +50,7 @@
     }
   }
   .container__profile-pic {
-    width: 50rem;
+    max-width: 50rem;
     height: 30rem;
 
     @include respond(tab-port) {
