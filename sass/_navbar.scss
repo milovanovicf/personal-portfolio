@@ -31,6 +31,29 @@
   &__item {
     position: relative;
     white-space: nowrap;
+
+    &:nth-child(1) {
+      transform: translateY(-30rem);
+      opacity: 0;
+      animation: fadedown 1s forwards 2s;
+    }
+    &:nth-child(2) {
+      transform: translateY(-30rem);
+      opacity: 0;
+      animation: fadedown 1s forwards 1s;
+    }
+    &:nth-child(3) {
+      transform: translateY(-30rem);
+      opacity: 0;
+      animation: fadedown 1s forwards;
+    }
+  }
+
+  @keyframes fadedown {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   &__link {

@@ -29,10 +29,16 @@
       padding: 15rem 3rem 20rem 3rem; } }
   .header__text-container {
     text-align: center;
-    position: relative; }
+    position: relative;
+    opacity: 0;
+    animation: fadein 1s forwards 3s; }
     @media (max-width: 37.5em) {
       .header__text-container {
         text-align: center; } }
+
+@keyframes fadein {
+  to {
+    opacity: 1; } }
   .header__heading-first {
     font-size: 7rem;
     font-weight: 400; }
@@ -43,7 +49,7 @@
     .header__heading-first .wrapper {
       display: inline-block;
       position: relative;
-      margin-left: 3rem;
+      margin-left: 2rem;
       width: 5rem; }
       @media (max-width: 23.43em) {
         .header__heading-first .wrapper {
@@ -257,6 +263,23 @@
   .nav__item {
     position: relative;
     white-space: nowrap; }
+    .nav__item:nth-child(1) {
+      transform: translateY(-30rem);
+      opacity: 0;
+      animation: fadedown 1s forwards 2s; }
+    .nav__item:nth-child(2) {
+      transform: translateY(-30rem);
+      opacity: 0;
+      animation: fadedown 1s forwards 1s; }
+    .nav__item:nth-child(3) {
+      transform: translateY(-30rem);
+      opacity: 0;
+      animation: fadedown 1s forwards; }
+
+@keyframes fadedown {
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
   .nav__link {
     text-decoration: none;
     color: #4f4a41;

@@ -19,12 +19,19 @@
   &__text-container {
     text-align: center;
     position: relative;
+    opacity: 0;
+    animation: fadein 1s forwards 3s;
 
     @include respond(phone) {
       text-align: center;
     }
   }
 
+  @keyframes fadein {
+    to {
+      opacity: 1;
+    }
+  }
   &__heading-first {
     font-size: 7rem;
     font-weight: 400;
@@ -37,7 +44,7 @@
     .wrapper {
       display: inline-block;
       position: relative;
-      margin-left: 3rem;
+      margin-left: 2rem;
       width: 5rem;
 
       @include respond(mini-phone) {
