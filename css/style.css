@@ -14,15 +14,19 @@
    */
 .header {
   color: #fff;
-  padding: 20rem 0 15rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #112d32;
-  position: relative; }
+  position: relative;
+  height: 100vh; }
+  @media (max-width: 102.5em) {
+    .header {
+      height: 95vh; } }
   @media (max-width: 56.25em) {
     .header {
+      height: 90vh;
       padding: 20rem 0; } }
   @media (max-width: 37.5em) {
     .header {
@@ -34,7 +38,9 @@
     animation: fadein 1s forwards 3s; }
     @media (max-width: 37.5em) {
       .header__text-container {
-        text-align: center; } }
+        text-align: center;
+        animation: none;
+        opacity: 1; } }
 
 @keyframes fadein {
   to {
@@ -65,7 +71,7 @@
       width: 100%;
       z-index: 5;
       text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
-      animation: flicker 3s linear 5s infinite; }
+      animation: flicker 3s linear 6s infinite; }
 
 @keyframes flicker {
   0%,
@@ -101,7 +107,8 @@
         font-size: 3rem; } }
   .header__paragraph {
     font-size: 2rem;
-    color: #6e6658; }
+    color: #6e6658;
+    font-weight: 800; }
   .header__square {
     display: block;
     width: 200px;
@@ -133,28 +140,28 @@
     height: 50px;
     width: 2px;
     animation-name: l1;
-    animation-delay: 0.9s; }
+    animation-delay: 2.9s; }
   .header .l2 {
     top: 0;
     left: 0;
     width: 100px;
     height: 2px;
     animation-name: l2;
-    animation-delay: 1.6s; }
+    animation-delay: 3.6s; }
   .header .l3 {
     right: 0;
     top: 0;
     height: 50px;
     width: 2px;
     animation-name: l3;
-    animation-delay: 2.5s; }
+    animation-delay: 4.5s; }
   .header .l4 {
     bottom: 0;
     right: 0;
     width: 100px;
     height: 2px;
     animation-name: l4;
-    animation-delay: 3.4s; }
+    animation-delay: 5.4s; }
 
 @keyframes l1 {
   0% {
@@ -391,7 +398,8 @@
     font-size: 1.9rem;
     padding: 0 10rem;
     text-align: center;
-    color: #07393a; }
+    color: #07393a;
+    font-weight: 800; }
     @media (max-width: 56.25em) {
       .about__paragraph {
         padding: 0 5rem; } }

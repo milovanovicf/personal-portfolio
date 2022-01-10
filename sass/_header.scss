@@ -1,14 +1,20 @@
 .header {
   color: #fff;
-  padding: 20rem 0 15rem 0;
+  //padding: 30rem 0 25rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #112d32;
   position: relative;
+  height: 100vh;
+
+  @include respond(mid-desk) {
+    height: 95vh;
+  }
 
   @include respond(tab-port) {
+    height: 90vh;
     padding: 20rem 0;
   }
 
@@ -24,6 +30,8 @@
 
     @include respond(phone) {
       text-align: center;
+      animation: none;
+      opacity: 1;
     }
   }
 
@@ -68,7 +76,7 @@
         1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4),
         1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00,
         0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
-      animation: flicker 3s linear 5s infinite;
+      animation: flicker 3s linear 6s infinite;
     }
 
     @keyframes flicker {
@@ -123,6 +131,7 @@
   &__paragraph {
     font-size: 2rem;
     color: #6e6658;
+    font-weight: 800;
   }
 
   &__square {
@@ -164,7 +173,7 @@
     height: 50px;
     width: 2px;
     animation-name: l1;
-    animation-delay: 0.9s;
+    animation-delay: 2.9s;
   }
 
   .l2 {
@@ -173,7 +182,7 @@
     width: 100px;
     height: 2px;
     animation-name: l2;
-    animation-delay: 1.6s;
+    animation-delay: 3.6s;
   }
 
   .l3 {
@@ -182,7 +191,7 @@
     height: 50px;
     width: 2px;
     animation-name: l3;
-    animation-delay: 2.5s;
+    animation-delay: 4.5s;
   }
 
   .l4 {
@@ -191,7 +200,7 @@
     width: 100px;
     height: 2px;
     animation-name: l4;
-    animation-delay: 3.4s;
+    animation-delay: 5.4s;
   }
   @keyframes l1 {
     0% {

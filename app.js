@@ -19,6 +19,7 @@ navLines.forEach((line, i) => {
     line.classList.toggle(`toggle-${i + 1}`);
   });
 });
+
 mobileBtn.addEventListener("click", function () {
   nav.classList.toggle("show");
 });
@@ -39,7 +40,7 @@ navBtns.forEach(function (el) {
 
 const options = {
   root: null,
-  threshold: 0.3,
+  threshold: 0.6,
   rootMargin: "0px",
 };
 
