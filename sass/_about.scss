@@ -7,10 +7,6 @@
   transform: translate(-50%, 0); */
   //font-family: "Open Sans";
 
-  @include respond(tab-lan) {
-    padding: 5rem 15rem;
-  }
-
   @include respond(tab-land) {
     padding: 10rem 5rem;
   }
@@ -19,6 +15,11 @@
     opacity: 0;
     transform: translateY(10rem);
     transition: all 1.3s;
+
+    @include respond(tab-port) {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .appear {

@@ -391,6 +391,10 @@
     opacity: 0;
     transform: translateY(10rem);
     transition: all 1.3s; }
+    @media (max-width: 56.25em) {
+      .about__wrapper {
+        opacity: 1;
+        transform: translateY(0); } }
   .about .appear {
     opacity: 1;
     transform: translateY(0); }
@@ -483,6 +487,10 @@
     opacity: 0;
     transform: translateY(10rem);
     transition: all 1.3s; }
+    @media (max-width: 56.25em) {
+      .portfolio__wrapper {
+        opacity: 1;
+        transform: translateY(0); } }
   .portfolio .appear {
     opacity: 1;
     transform: translateY(0); }
