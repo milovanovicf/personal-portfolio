@@ -6,6 +6,9 @@ const header = document.querySelector(".header");
 const about = document.querySelector(".about");
 const portfolio = document.querySelector(".portfolio");
 
+const aboutWrapper = document.querySelector(".about__wrapper");
+const portfolioWrapper = document.querySelector(".portfolio__wrapper");
+
 const sections = [header, about, portfolio];
 
 const mobileBtn = document.querySelector(".mobile-menu");
@@ -23,12 +26,6 @@ navLines.forEach((line, i) => {
 mobileBtn.addEventListener("click", function () {
   nav.classList.toggle("show");
 });
-/* console.log(
-  navBtns.forEach((el) =>
-    console.log(el.getAttribute("href").toString() === `#home`)
-  )
-); */
-//console.log(sections);
 
 navBtns.forEach(function (el) {
   el.addEventListener("click", function (e) {
@@ -57,6 +54,12 @@ const observer = new IntersectionObserver(function (entries, observer) {
         el.classList.remove("active");
       }
     });
+    if (entry.target.classList.contains("about")) {
+      aboutWrapper.classList.add("appear");
+    }
+    if (entry.target.classList.contains("portfolio")) {
+      portfolioWrapper.classList.add("appear");
+    }
   });
 }, options);
 

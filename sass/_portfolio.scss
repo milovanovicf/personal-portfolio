@@ -27,6 +27,17 @@
     fill: #88bdbc;
   }
 
+  &__wrapper {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all 1.3s;
+  }
+
+  .appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   &__heading {
     color: #07393a;
     font-size: 4rem;
@@ -229,7 +240,7 @@
     transition-timing-function: cubic-bezier(0.5, 3, 0, 1);
     background-color: #fff;
     position: absolute;
-    bottom: 6rem;
+    bottom: 3rem;
     left: 20%;
     border: 1px solid #07393a;
 

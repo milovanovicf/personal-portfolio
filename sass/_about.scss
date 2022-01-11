@@ -2,8 +2,7 @@
   padding: 5rem 15rem;
   background-color: #88bdbc;
   color: #fff;
-  /* position: relative;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
   transform: translate(-50%, 0); */
   //font-family: "Open Sans";
@@ -14,6 +13,17 @@
 
   @include respond(tab-land) {
     padding: 10rem 5rem;
+  }
+
+  &__wrapper {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all 1.3s;
+  }
+
+  .appear {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   &__heading {
@@ -95,12 +105,11 @@
       &:nth-child(2)::after {
         width: 40%;
       }
-      &:nth-child(3)::after {
+      &:nth-child(3)::after,
+      &:nth-child(4)::after {
         width: 60%;
       }
-      &:nth-child(4)::after {
-        width: 70%;
-      }
+
       &:nth-child(5)::after {
         width: 30%;
       }
