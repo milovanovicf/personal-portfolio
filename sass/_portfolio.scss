@@ -66,6 +66,18 @@
     }
   }
 
+  &__text {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    color: #07393a;
+
+    @include respond(mid-desk) {
+      display: none;
+    }
+  }
+
   &__link {
     text-decoration: none;
     display: flex;
@@ -85,6 +97,10 @@
       color: #fff;
       font-size: 1.2rem;
     }
+  }
+
+  .portfolio__item--4.box {
+    background-color: #0b0d19;
   }
 
   &__grid {
