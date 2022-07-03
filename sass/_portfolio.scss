@@ -103,6 +103,10 @@
     background-color: #0b0d19;
   }
 
+  .portfolio__item--3.box {
+    background-color: #f9ada0;
+  }
+
   &__grid {
     width: 60%;
     margin: 0 auto;
@@ -190,7 +194,6 @@
   &__item--3 {
     grid-row: 1 / span 2;
     grid-column: 2 / span 1;
-    // background-color: #07393a;
 
     @include respond(tab-land) {
       grid-row: 3 / span 2;
